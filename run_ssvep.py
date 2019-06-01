@@ -10,20 +10,16 @@ from InputBox import InputBox
 import csv_collector
 
 
-
-
-
-
 expinfos = InputBox()
 filename = expinfos.file()
-print expinfos.port_name()
+print (expinfos.port_name())
 port_addr = expinfos.port_name()
-print filename
+print (filename)
 flash_dur = expinfos.stim_duration()
 trialnums = expinfos.stim_trials()
 waitduration = expinfos.waitduration()
-print port_addr
-print type(port_addr)
+print (port_addr)
+print (type(port_addr))
 
 
 #set of stimuli followed by frequency of stimuli. 

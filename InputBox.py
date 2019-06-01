@@ -7,14 +7,13 @@ SSVEP_GUI
 from psychopy import gui
 
 
-
 class InputBox(object):
 
   def __init__(self):
     self.myDlg = gui.Dlg(title="OpenBCI Menu")
     self.myDlg.addText('Subject info')
     self.myDlg.addField('Participant:')#0
-    self.myDlg.addField('Session', 001)#1
+    self.myDlg.addField('Session')
     self.myDlg.addField('Port', '/dev/tty/ACM0')#2
     self.myDlg.addText('Frequency Selction')
     self.myDlg.addField('Frequency', choices=["None", "6", "7","10","12", "15", "20"])#3
@@ -30,7 +29,7 @@ class InputBox(object):
       self.options = {'participant': self.thisInfo[0], 'session': self.thisInfo[1], 'port': self.thisInfo[2], 'Frequency': self.thisInfo[3], 'Duration': self.thisInfo[4], 'InterTrialTime': self.thisInfo[5], 'NumberTrials': self.thisInfo[6]}
     
     else:
-      print 'User Cancelled'
+      print ('User Cancelled')
 
             # Setup filename for saving
     self.fname = '%s_%s.csv' %(self.options['participant'], self.options['session'])

@@ -51,7 +51,7 @@ class SSVEP(object):
     def start(self):
 
         ###Testing framerate grabber###
-        print self.mywin.getActualFrameRate()
+        print (self.mywin.getActualFrameRate())
         self.Trialclock = core.Clock()
         self.freq = 60/(self.frame_on+self.frame_off)
 
